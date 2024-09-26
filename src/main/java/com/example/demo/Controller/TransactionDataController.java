@@ -18,8 +18,8 @@ import java.util.List;
 
 @Api(tags = "TransactionData")
 @RestController
-@CrossOrigin("http://localhost:3000")
-@RequestMapping("/transactions")
+@CrossOrigin("*")
+@RequestMapping("/api/transactions")
 public class TransactionDataController {
 
     @Autowired

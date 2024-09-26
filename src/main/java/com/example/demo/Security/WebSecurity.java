@@ -42,11 +42,12 @@ public class WebSecurity extends WebSecurityConfigurerAdapter implements WebMvcC
                 .and()
                 .csrf().disable().authorizeRequests()
 
-                .antMatchers("/user/**").permitAll()
+                .antMatchers("/api/user/**").permitAll()
 
-                .antMatchers("/refreshToken").permitAll()
+                .antMatchers("/api/refreshToken").permitAll()
+                .antMatchers("/api/login").permitAll()
 
-                .antMatchers("/transactions/**").hasAuthority("USER")
+                .antMatchers("/api/transactions/**").hasAuthority("USER")
 
 
                 .anyRequest().permitAll()
@@ -54,7 +55,9 @@ public class WebSecurity extends WebSecurityConfigurerAdapter implements WebMvcC
                 .addFilter(new JWTAuthenticationFilter(authenticationManager(), refreshTokenService, jwTokenService))
                 .addFilter(new JWTAuthorizationFilter(authenticationManager(), jwTokenService))
                 .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .formLogin().loginProcessingUrl("/api/login");
     }
 
     @Override
@@ -66,7 +69,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter implements WebMvcC
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")
+                .allowedOrigins("*")
                 .allowedMethods("*");
     }
 

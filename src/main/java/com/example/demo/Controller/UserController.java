@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Api(tags = "User")
 @RestController
-@CrossOrigin("http://localhost:3000")
-@RequestMapping("/user")
+@CrossOrigin("*")
+@RequestMapping("/api/user")
 public class UserController {
 
     @Hidden

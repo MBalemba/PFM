@@ -11,10 +11,10 @@ IT-департамент Промсвязьбанка поставил зада
 
 
 
-## Pdf cервис содержит следующие страницы:
+## PFM cервис содержит следующие страницы:
 
 Авторизованные пользователи имеют доступ к следующим страницам:
-+ `http://localhost:3000/home` - Страница содержимого pdf системы, отображение личной информации пользователся
++ `http://localhost:3000/home` - Страница содержимого PFM системы, отображение личной информации пользователся
 
 Не авторизованные пользователи имеют доступ к следующим страницам:
 + `http://localhost:3000/login` - Страница авторизации в приложение
@@ -106,12 +106,12 @@ IT-департамент Промсвязьбанка поставил зада
 
 Над проектом трудилась команда ITUtopia
 
-GitHub:  https://github.com/Vova-oss/PFM
 
-1.	Иван Полукаров - ML developer
-2.	Максим Балемба - Frontend developer
-3.	Владимир Полетаев - Backend developer
-4.	Александр Корольков - UI & UX designer
+
+1.	Иван Полукаров - ML developer. GitHub:  https://github.com/PolukarovIvan
+2.	Максим Балемба - Frontend developer. GitHub:  https://github.com/MBalemba
+3.	Владимир Полетаев - Backend developer. GitHub:  https://github.com/Vova-oss
+4.	Александр Корольков - UI & UX designer. GitHub:  https://github.com/xaazias
 
 
 
